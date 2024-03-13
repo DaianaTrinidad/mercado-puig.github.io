@@ -1,10 +1,15 @@
-
+const mainServices= require("../services/mainService");
 
 const mainController = {
   home: (req, res) => {
-    //res.sendFile(path.join(__dirname, "../views/home.html"));
-    res.render("home",{
+    const visitedProducts = mainServices.getVisitedProducts();
+    const inSaleProducts = mainServices.getInSaleProducts();
 
+    console.log(visitedProducts);
+    
+    res.render("home",{
+    visitedProducts,
+    inSaleProducts,
     });
   },
   login: (req, res) => {
