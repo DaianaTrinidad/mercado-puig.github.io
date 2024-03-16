@@ -63,49 +63,18 @@
 
     <!-- ---------------------------- MAIN ---------------------------- -->
     <main>
-        <section class="main-section-top">
+        <div class="main-section-top">
             <h2 class="main-section-title">Basado en tu última visita</h2>
             <article class="product-article">
-                <img class="product-image" src="images/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$6.770</p>
-                    <p class="discount">50% off</p>
-                    <h3 class="product-description">Cafetera Moulinex</h3>
-                </div>
-            </article>
-            <article class="product-article">
-                <img class="product-image" src="images/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$230.000</p>
-                    <p class="discount">3% off</p>
-                    <h3 class="product-description">MacBook Pro 2019</h3>
-                </div>
-            </article>
-            <article class="product-article">
-                <img class="product-image" src="images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$70.500</p>
-                    <p class="discount">10% off</p>
-                    <h3 class="product-description">Samsung Galaxy S10</h3>
-                </div>
-            </article>
-            <article class="product-article">
-                <img class="product-image" src="images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43'">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$23.200</p>
-                    <p class="discount">5% off</p>
-                    <h3 class="product-description">SmartTv Samsung 43"</h3>
-                </div>
-            </article>
-        </section>
+                <% visitedProducts.forEach(product => { %>
+                <%- include("partials/product-card", {product}) %>
+                <% }) %>
+                
+             </div>
         <section class="main-section-top">
             <h2 class="main-section-title">Sección de ofertas</h2>
             <article class="product-article">
-                <img class="product-image" src="images/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
+                <img class="product-image" src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
                 <div class="product-details-container">
                     <i class="fa-solid fa-truck product-truck-logo"></i>
                     <p class="price">$6.770</p>
@@ -114,7 +83,7 @@
                 </div>
             </article>
             <article class="product-article">
-                <img class="product-image" src="images/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
+                <img class="product-image" src="images/products/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
                 <div class="product-details-container">
                     <i class="fa-solid fa-truck product-truck-logo"></i>
                     <p class="price">$230.000</p>
@@ -123,7 +92,7 @@
                 </div>
             </article>
             <article class="product-article">
-                <img class="product-image" src="images/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
+                <img class="product-image" src="images/products/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
                 <div class="product-details-container">
                     <i class="fa-solid fa-truck product-truck-logo"></i>
                     <p class="price">$70.500</p>
@@ -132,7 +101,7 @@
                 </div>
             </article>
             <article class="product-article">
-                <img class="product-image" src="images/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43'">
+                <img class="product-image" src="images/products/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43'">
                 <div class="product-details-container">
                     <i class="fa-solid fa-truck product-truck-logo"></i>
                     <p class="price">$23.200</p>
