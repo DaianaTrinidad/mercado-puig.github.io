@@ -12,7 +12,10 @@ app.listen(3000, () => {
 app.set("view engine", "ejs" );
 //como no esta en la raíz views hay que setearlo (al igual que public)
 app.set("views", "./src/views");
+const viewUtils= require("./utils/view-utils");
 
 app.use(express.static(path.join(__dirname, "../public")));
+//esto hace que podemos acceder desde cualquier vista a viewUtils
+app.locals= viewUtils;
 
 app.use(mainRouter);

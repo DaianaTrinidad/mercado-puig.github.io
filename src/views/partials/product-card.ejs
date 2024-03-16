@@ -4,7 +4,7 @@
     <img class="product-image" src="/images/products/<%= product.image %>" alt="imagen de producto <%= product.name %>">
     <div class="product-details-container">
     <i class="fa-solid fa-truck product-truck-logo"></i>
-    <p class="price"><%= product.price %> % OFF</p>
+    <p class="price"><%= getFinalPrice(product) %> % OFF</p>
     <p class="discount"><%= product.discount %> % OFF</p>
     </div>     
 </article>
