@@ -1,11 +1,9 @@
-const mainServices= require("../services/mainService");
+const mainServices= require("../services/productService");
 
 const mainController = {
   home: (req, res) => {
     const visitedProducts = mainServices.getVisitedProducts();
     const inSaleProducts = mainServices.getInSaleProducts();
-
-    console.log(visitedProducts);
     
     res.render("home",{
     visitedProducts,
