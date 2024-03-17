@@ -18,7 +18,7 @@ const mainController = {
     //res.sendFile(path.join(__dirname, "../views/register.html"));
     res.render("register");
 },
-detail:(req,res)=>{
+  detail:(req,res)=>{
   res.render("detail");
 }
 };

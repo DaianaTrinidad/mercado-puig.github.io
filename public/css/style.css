@@ -201,7 +201,43 @@ main{
 .login-button:hover{
     background-color: #0022AA;
 }
-
+/*====== Formularios ======*/
+.form-label {
+    display: inline-block;
+    font-size: 1 em;
+    margin: 10px 0;
+    margin-left: 20%;
+    
+  }
+  
+  .form-input {
+    display: block;
+    width: 60%;
+    height: 47px;
+    margin-bottom: 10px;
+    font-size: 1 em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px var(--gray);
+    padding: 0 15px;
+    margin-left: 20%;
+  }
+  
+  textarea.form-input {
+    min-height: 140px;
+    resize: vertical;
+    padding: 10px;
+  }
+  .buy-now-button {
+   margin-left: 20%;
+   background-color: var(--light-blue);
+   padding: 10px;
+   border-radius: 8px;
+   margin-bottom: 12px;
+   background-color: #1259c3;
+   color: #ebebeb;
+   border:none;
+  }
 /*------------------------------------- FOOTER -------------------------------------*/
 
 footer{

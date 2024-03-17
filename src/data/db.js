@@ -11,6 +11,7 @@ const db = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         return products;
       },
-    }};
+
+  }};
 
 module.exports=db;

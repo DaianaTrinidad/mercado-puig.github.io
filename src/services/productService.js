@@ -18,13 +18,17 @@ const formatProductsPrices = function (products) {
   return products.map((product) => formatProductPrices(product));
 };
 const productServices={
+    getAllProducts: () => {
+      return db.products.find();
+     },
+
     getVisitedProducts: () => {
         const products = db.products
           .find()
           .filter((product) => product.category == "visited");
         return formatProductsPrices(products);
       },
-      getInSaleProducts: () => {
+    getInSaleProducts: () => {
         const products = db.products
           .find()
           .filter((product) => product.category == "in-sale");
