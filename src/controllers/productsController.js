@@ -15,6 +15,11 @@ const controller = {
     console.log(product);
     res.redirect("/products");
     },
+    detail: (req, res) => {
+        const id = req.params.id;
+        const product = productService.getProduct(id);
+        res.render("detail", { product });
+      },
 
 };
 

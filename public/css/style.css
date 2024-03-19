@@ -238,6 +238,112 @@ main{
    color: #ebebeb;
    border:none;
   }
+/*--------- PRODUCTOS DETAIL ------------------------------------------------------*/
+.container{
+    margin:auto;
+    width: 960px;
+    height: 650px;
+    padding:5px;
+    background-color: white;
+    
+}
+.logo{
+    width:100%;
+    float:left;
+    margin-bottom: 4%;
+    background-color: white;
+    
+    
+  
+}
+.left{
+  float:left;
+  width:60%;
+  height: 50%;
+  
+  
+}
+.rigth{
+  float:right;
+  width:40%;
+  height: 50%;
+  
+}
+.image-product{
+    width:70%;
+    margin-left:15%;
+    margin-bottom: 3%;
+}
+.product-detail {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.product-detail-info {
+    border-left: 1px solid var(--light-gray);
+    padding: 15px;
+    height: 100%;
+  }
+  .product-detail-price{
+    font-size: 30px;
+    margin: 10px 0;
+    margin-bottom: 7%;
+  }
+.cuotas{
+    margin-left: 10%;
+   margin-top: -13%;
+    
+}
+.descuento-2{
+    color: #39b54a;
+}
+.tach{
+    text-decoration: line-through;
+}
+.emoticon{
+    margin-bottom: 8%;
+    color:#39b54a;
+   
+}
+.buy-now-button {
+    background-color: var(--light-blue);
+    float:right;
+    margin-right: 10%;
+    width:90%;
+    background-color: #0022AA;
+    margin-top: 7%;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom:6% ;
+    
+  }
+  .action-button-edit{
+    background-color: chocolate;
+    padding:3%;
+    border-radius: 3%;
+    text-decoration: none;
+    color: #ebebeb;
+    float:right;
+    margin-top: 5%;
+    margin-right: 50%;
+    margin-bottom: -9%;
+    
+  }
+  .action-button-delete{
+
+    display:inline-block;
+    margin-right: 10px;
+    padding: 13%;
+    text-decoration: none;
+    border-radius: 4%;
+    margin-left: 240%;
+    margin-top: -20%;
+    margin-bottom: 6%;
+    border-top: 10%;
+    margin-bottom: 20%;
+    background-color: red;
+    color: #ebebeb;
+  }
 /*------------------------------------- FOOTER -------------------------------------*/
 
 footer{

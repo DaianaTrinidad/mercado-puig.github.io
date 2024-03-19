@@ -1,5 +1,6 @@
 const db=require("../data/db");
 const formatProductPrices = function (product) {
+  //formatea un producto
   const priceWithDiscount =
     product.price - product.price * (product.discount / 100);
   product.priceWithDiscount = `$ ${priceWithDiscount.toLocaleString("es", {
@@ -14,6 +15,7 @@ const formatProductPrices = function (product) {
 
   return product;
 };
+//formatea todos los productos
 const formatProductsPrices = function (products) {
   return products.map((product) => formatProductPrices(product));
 };
@@ -33,6 +35,10 @@ const productServices={
           .find()
           .filter((product) => product.category == "in-sale");
         return formatProductsPrices(products);
+      },
+    getProduct: (id) => {
+        const product = db.products.findById(id);
+        return formatProductPrices(product);
       },
     };
 module.exports=productServices;
