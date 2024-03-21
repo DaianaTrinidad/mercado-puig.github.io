@@ -20,6 +20,11 @@ const controller = {
         const product = productService.getProduct(id);
         res.render("detail", { product });
       },
+      edit: (req, res) => {
+        const id = req.params.id;
+        const product = productService.getProduct(id);
+        res.render("product-edit-form", { product });
+      },
 
 };
 

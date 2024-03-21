@@ -40,5 +40,6 @@ const productServices={
         const product = db.products.findById(id);
         return formatProductPrices(product);
       },
+      
     };
 module.exports=productServices;
