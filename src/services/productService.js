@@ -1,6 +1,6 @@
-const db=require("../data/db");
+const db = require("../data/db");
+
 const formatProductPrices = function (product) {
-  //formatea un producto
   const priceWithDiscount =
     product.price - product.price * (product.discount / 100);
   product.priceWithDiscount = `$ ${priceWithDiscount.toLocaleString("es", {
@@ -15,31 +15,50 @@ const formatProductPrices = function (product) {
 
   return product;
 };
-//formatea todos los productos
 const formatProductsPrices = function (products) {
   return products.map((product) => formatProductPrices(product));
 };
-const productServices={
-    getAllProducts: () => {
-      return db.products.find();
-     },
 
-    getVisitedProducts: () => {
-        const products = db.products
-          .find()
-          .filter((product) => product.category == "visited");
-        return formatProductsPrices(products);
-      },
-    getInSaleProducts: () => {
-        const products = db.products
-          .find()
-          .filter((product) => product.category == "in-sale");
-        return formatProductsPrices(products);
-      },
-    getProduct: (id) => {
-        const product = db.products.findById(id);
-        return formatProductPrices(product);
-      },
-      
-    };
-module.exports=productServices;
+const productServices = {
+  getAllProducts: () => {
+    return db.products.findAll();
+  },
+  getProduct: (id) => {
+    return db.products.findById(id);
+  },
+  getFormattedProduct: (id) => {
+    const product = db.products.findById(id);
+    return formatProductPrices(product);
+  },
+  getVisitedProducts: () => {
+    const products = db.products
+      .findAll()
+      .filter((product) => product.category == "visited");
+    return formatProductsPrices(products);
+  },
+  getInSaleProducts: () => {
+    const products = db.products
+      .findAll()
+      .filter((product) => product.category == "in-sale");
+    return formatProductsPrices(products);
+  },
+  searchProducts: (query) => {
+    const products = db.products
+      .findAll()
+      .filter((product) =>
+        product.name.toLowerCase().includes(query.toLowerCase())
+      );
+    return formatProductsPrices(products);
+  },
+  createProduct: (product) => {
+    db.products.create(product);
+  },
+  updateProduct: (id, product) => {
+    db.products.update(id, product);
+  },
+  deleteProduct: (id) => {
+    db.products.delete(id);
+  },
+};
+
+module.exports = productServices;

@@ -10,17 +10,14 @@ const mainController = {
     inSaleProducts,
     });
   },
-  login: (req, res) => {
-    //res.sendFile(path.join(__dirname, "../views/login.html"));
-    res.render("login");
+  search: (req, res) => {
+    const keywords = req.query.keywords;
+    const foundProducts = productServices.searchProducts(keywords);
+    res.render("results", { foundProducts });
   },
-  register: (req, res) => {
-    //res.sendFile(path.join(__dirname, "../views/register.html"));
-    res.render("register");
-},
-  detail:(req,res)=>{
-  res.render("detail");
-}
 };
+
+
+ 
 
 module.exports = mainController;
