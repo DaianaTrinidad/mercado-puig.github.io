@@ -16,58 +16,18 @@
 
     <!-- ---------------------------- MAIN ---------------------------- -->
     <main>
-        <div class="main-section-top">
+        <section class="main-section-top">
             <h2 class="main-section-title">Basado en tu última visita</h2>
-            <article class="product-article">
-                <% visitedProducts.forEach(product => { %>
-                <%- include("partials/product-card", {product}) %>
-                <% }) %>
-                
-             </div>
+                <% visitedProducts.forEach(product=> { %> <%- 
+                    include("partials/product-card", {product}) %> <% }) %>      
+        </section>
         <section class="main-section-top">
             <h2 class="main-section-title">Sección de ofertas</h2>
-            <article class="product-article">
-                <img class="product-image" src="images/products/img-cafetera-moulinex.jpg" alt="Cafetera Moulinex">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$6.770</p>
-                    <p class="discount">40% off</p>
-                    <h3 class="product-description">Cafetera Moulinex</h3>
-                </div>
-            </article>
-            <article class="product-article">
-                <img class="product-image" src="images/products/img-macbook-pro-2019.jpg" alt="MacBook Pro 2019">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$230.000</p>
-                    <p class="discount">20% off</p>
-                    <h3 class="product-description">MacBook Pro 2019</h3>
-                </div>
-            </article>
-            <article class="product-article">
-                <img class="product-image" src="images/products/img-samsung-galaxy-s10.jpg" alt="Samsung Galaxy S10">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$70.500</p>
-                    <p class="discount">10% off</p>
-                    <h3 class="product-description">Samsung Galaxy S10</h3>
-                </div>
-            </article>
-            <article class="product-article">
-                <img class="product-image" src="images/products/img-tv-samsung-smart.jpg" alt="SmartTv Samsung 43'">
-                <div class="product-details-container">
-                    <i class="fa-solid fa-truck product-truck-logo"></i>
-                    <p class="price">$23.200</p>
-                    <p class="discount">5% off</p>
-                    <h3 class="product-description">SmartTv Samsung 43"</h3>
-                </div>
-            </article>
+            <% inSaleProducts.forEach(product=> { %> <%- 
+                include("partials/product-card", {product}) %> <% }) %>
         </section>
     </main>
             
-
-               
-
     <!-- ---------------------------- FOOTER ---------------------------- -->
     <footer>
         <%- include("partials/footer") %>

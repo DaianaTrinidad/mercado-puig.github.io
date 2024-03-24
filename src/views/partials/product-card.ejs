@@ -1,11 +1,8 @@
-<main>
-<div class="product-details-container">
- <article class="product-article">
+<article class="product-article">
     <img class="product-image" src="/images/products/<%= product.image %>" alt="imagen de producto <%= product.name %>">
     <div class="product-details-container">
     <i class="fa-solid fa-truck product-truck-logo"></i>
-    <p class="price"><%= getFinalPrice(product) %> % OFF</p>
-    <p class="discount"><%= product.discount %> % OFF</p>
-    </div>     
+    <p class="price"><%= product.priceWithDiscount %></p>
+    <p class="discount"><%= product.discount %> % OFF</p>  
+    <p class="product-description"><%= product.name %></p>
 </article>
-</main>

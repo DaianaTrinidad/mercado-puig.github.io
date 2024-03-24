@@ -114,8 +114,9 @@ main{
 }
 
 .price{
-    width: 30%;
-    font-size: 1.2rem;
+    width: 50%;
+    font-size: 20px;
+
 }
 
 .discount{
